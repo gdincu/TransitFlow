@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransitFlow</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="controls">
+    <div style="margin-bottom: 10px;">
+        <strong>Time: </strong><span id="time-display">12:00:00</span>
+    </div>
+    <input type="range" id="time-slider" min="0" max="86399" value="43200">
+    <div style="display: flex; justify-content: space-between; font-size: 10px; color: #666; margin-top: 5px;">
+        <span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>23:59</span>
+    </div>
+
+    <div class="btn-group">
+        <button id="play-pause-btn" onclick="autoPlay.toggle()"><i class="fas fa-pause"></i></button>
+        <button onclick="recorder.start()"><i class="fas fa-circle" style="color:red"></i> Record</button>
+        <button onclick="recorder.stop()"><i class="fas fa-save"></i> Save</button>
+    </div>
+    <div id="recording-status">● RECORDING</div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
