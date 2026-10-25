@@ -5,7 +5,7 @@
  * stale-while-revalidate for navigations/app shell. OSM tiles + CDN
  * libs are intentionally network-only (too large/volatile to precache).
  */
-const CACHE_NAME = "transitflow-v3";
+const CACHE_NAME = "transitflow-v5";
 
 const BASE_ASSETS = [
   "./",
@@ -14,6 +14,7 @@ const BASE_ASSETS = [
   "favicon.ico",
   "css/style.css",
   "js/script.js",
+  "js/live.js",
 ];
 
 const DATA_ASSETS = [
@@ -45,6 +46,7 @@ const ICON_ASSETS = [
   "assets/icons/route_icon_4.png",
   "assets/icons/route_icon_5b.png",
   "assets/icons/route_icon_6.png",
+  "assets/icons/route_icon_7.png",
   "assets/icons/route_icon_9.png",
   "assets/icons/route_icon_e1r.png",
   "assets/icons/route_icon_e1t.png",
